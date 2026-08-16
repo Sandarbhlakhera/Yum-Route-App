@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>FoodFrenzy</title>
+	<title>YumRoute</title>
 	<link rel="icon" type="image/x-icon" href="./img/b.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 	<link rel="stylesheet" href="" th:href="@{/css/Navigation.css}" />
@@ -41,7 +41,7 @@
 					<small style="color: red;" th:text="${error2}"></small><br />
 					<button type="submit" class="loginButton">Log in</button><br>
 
-					<p>I don't have an account? <a href="register.html" style="color: green;">Register Here</a></p>
+					<p>I don't have an account? <a th:href="@{/register}" style="color: green;">Register Here</a></p>
 				</form>
 			</div>
 		</div>

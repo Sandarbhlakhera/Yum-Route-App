@@ -16,6 +16,18 @@ public class UserController
 	@Autowired
 	private UserServices services;
 
+	@GetMapping("/register")
+    public String showRegisterPage(Model model) {
+        model.addAttribute("userRegistration", new User());
+        return "register";
+    }
+
+	@PostMapping("/register")
+    public String registerUser(@ModelAttribute("userRegistration") User user) {
+        services.addUser(user);
+        return "redirect:/login";
+    }
+
 	@PostMapping("/addingUser")
 	public String  addUser(@ModelAttribute User user)
 	{
